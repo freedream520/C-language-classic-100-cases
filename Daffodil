@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+//判断水仙花数
+int main()
+{
+    int n,x,x1,x2,x3;
+
+    do{
+        printf("请输入一个三位数：");
+        scanf("%d",&n);
+    }while(n > 999 || n < 100);
+
+    x1 = n/100;
+    x2 = (n/10)%10;
+    x3 = n%10;
+
+    x = x1*x1*x1+x2*x2*x2+x3*x3*x3;
+    if(n == x)
+        printf("Yes!");
+    else
+        printf("No!");
+    return 0;
+}
